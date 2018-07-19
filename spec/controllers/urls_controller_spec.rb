@@ -20,11 +20,11 @@ RSpec.describe UrlsController, type: :controller do
         expect(Url.find_by(valid_params[:url])).not_to eq nil
       end
 
-    #   it "should redirect to #index" do
-    #     post :create, valid_params
-    #     expect(response).to redirect_to( urls_path )
-    #   end
-    # end
+      it "should redirect to #index" do
+        post :create, valid_params
+        expect(response).to redirect_to( urls_path )
+      end
+    end
 
     # context "when invalid params" do
     #   it "should rerender submission page" do
