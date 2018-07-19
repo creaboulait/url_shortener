@@ -9,11 +9,9 @@ class Url < ActiveRecord::Base
   end
   
   def self.retrieve_short_url(long_url)
-    if long_url != long_url
-      nil
-    else 
-      # x = Url.find_by(long_url: long_url)
-      # return x.short_url
+    x = Url.find_by(long_url: long_url)
+    if x != nil
+      x.short_url
     end
   end
 
