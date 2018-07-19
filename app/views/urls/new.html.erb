@@ -1,0 +1,8 @@
+<!-- build a form that takes in a long URL and shortens it. The shortened URL will then be displayed underneath the form. -->
+<h3>Shorten your URL</h3>
+
+
+<%= form_tag url: new_url_path do |form| %>
+  <%= text_field_tag :long_url %>
+  <%= submit_tag %>
+<% end %>
